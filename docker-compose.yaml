@@ -19,6 +19,7 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.port=80"
+      - "traefik.docker.network=web"
       - "traefik.http.routers.snakecity.rule=Host(`snake.city`)"
       - "traefik.http.routers.snakecity.entrypoints=websecure"
       - "traefik.http.routers.snakecity.tls.certresolver=myresolver"      
