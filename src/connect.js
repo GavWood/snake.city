@@ -1,5 +1,5 @@
 
-	ws = new WebSocket("wss://snake.city", "echo-protocol");
+	ws = new WebSocket("wss://localhost", "echo-protocol");
 
     ws.onopen = function ()
 	{
