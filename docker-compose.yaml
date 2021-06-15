@@ -18,9 +18,10 @@ services:
       - web
     labels:
       - "traefik.enable=true"
+      - "traefik.port=80"
       - "traefik.http.routers.snake-city.rule=Host(`snake.city`)"
       - "traefik.http.routers.snake-city.entrypoints=websecure"
-      - "traefik.http.routers.snake-city.tls.certresolver=myresolver"
+      - "traefik.http.routers.snake-city.tls.certresolver=myresolver"      
     logging:
       driver: "json-file"
       options:
