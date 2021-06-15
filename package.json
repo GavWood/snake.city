@@ -1,0 +1,30 @@
+{
+  "name": "snake.city",
+  "version": "1.0.0",
+  "description": "An urban game that can be played anywhere and with anybody",
+  "main": "./src/newServer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./src/newServer.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GavWood/snake.city.git"
+  },
+  "author": "Gavin Wood",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GavWood/snake.city/issues"
+  },
+  "homepage": "https://github.com/GavWood/snake.city#readme",
+  "engines": {
+    "node": "14.x.x",
+    "npm": "7.x.x"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "fs": "^0.0.1-security",
+    "uuidv4": "^6.2.10",
+    "websocket": "^1.0.34"
+  }
+}
