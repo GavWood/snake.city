@@ -1,0 +1,513 @@
+
+@font-face {
+    font-family: 'fleuronregular';
+    src: url('fleuronregular-webfont.woff2') format('woff2'),
+         url('fleuronregular-webfont.woff') format('woff'),
+         url('fleuronregular-ios.ttf')  format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+a{
+    color: black;
+    text-decoration:underline;
+    text-decoration-color:black;
+}
+
+body {
+	width: 80%;
+    margin: auto;
+    margin-top: 10%;
+    overflow: hidden;
+
+    -webkit-user-select: none;
+    /* Chrome all / Safari all */
+    -moz-user-select: none;
+    /* Firefox all */
+    -ms-user-select: none;
+    /* IE 10+ */
+    user-select: none;
+    /* Likely future */
+    background-color: black;
+    font-family: 'fleuronregular', Arial, Helvetica, sans-serif;
+    color: blanchedalmond;
+}
+
+h2{
+    color: black;
+    font-style: normal;
+    font-size: 27px;
+    margin-top: 40px;
+}
+
+.background_snake{
+    background-image: url("snakebg.png");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-attachment: fixed;  
+    background-position: center; /* Center the image */
+    background-color:#E7FF54 ;
+}
+@media only screen and (max-width: 800px) {
+    .background_snake {
+        background-size: cover;
+    }
+  }
+
+.nobg{
+    overflow: scroll;
+    background-color:#E7FF54;
+}
+
+.logo {
+	width: 100%;
+	bottom: 10px;  
+}
+
+.gameText{
+    color: black;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.explantionBox{
+    margin: auto;
+    margin-top: 140px;
+    text-align: center;
+}
+
+#TopLogo{
+    text-decoration: none !important;
+    color: black;
+    font-size: 37px;
+    position: fixed;
+    top: 30px;
+    left: 30px;
+}
+
+#TopBack{
+    text-decoration: none !important;
+    color: black;
+    font-size: 60px;
+    position: fixed;
+    top: 10px;
+    left: 30px;
+}
+
+#BottomCopy{
+    color: black;
+    font-size: 15.5px;
+    position: fixed;
+    bottom: 30px;
+    right: 25px;
+    text-align: right;
+    line-height: 19px;
+}
+
+#bodytext {
+    font-family: 'fleuronregular', Arial, Helvetica, sans-serif;
+    font-style: normal;
+	font-weight: normal;	
+	font-size: 12px;
+    text-align: center;
+}
+
+#startgame {
+
+    font-family: 'fleuronregular', Arial, Helvetica, sans-serif;
+	font-style: normal;
+	font-size: 22px;
+	
+	-webkit-border-radius: 85px;
+	-khtml-border-radius: 85px;	
+	-moz-border-radius: 85px;
+    border-radius: 85px;
+    
+    border: 2px solid #0F0F0F;
+    box-sizing: border-box;
+	
+	background-color:#ffffff04;
+	
+	color: black;
+	padding-left: 23px;
+	padding-right:23px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	text-align: center;
+  
+    margin:0 auto;
+}
+
+#playbutton {
+
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+
+    font-family: 'fleuronregular', Arial, Helvetica, sans-serif;
+	font-style: normal;
+	font-size: 25px;
+	
+	-webkit-border-radius: 85px;
+	-khtml-border-radius: 85px;	
+	-moz-border-radius: 85px;
+    border-radius: 85px;
+    
+    border: 2px solid #0F0F0F;
+    box-sizing: border-box;
+	
+	background-color:#ffffff04;
+	
+	color: black;
+	padding-left: 23px;
+	padding-right:23px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	text-align: center;
+  
+    margin:0 auto;
+}
+
+#covidbutton {
+    font-family: 'fleuronregular', Arial, Helvetica, sans-serif;
+ 
+	font-style: normal;
+	font-weight: bold;	
+    font-size: 10px;
+
+	
+	-webkit-border-radius: 10px;
+	-khtml-border-radius: 10px;	
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	
+	background-color:#FE3552;
+	
+	color: black;
+	border: 0;
+	padding-left: 40px;
+	padding-right: 40px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-align: center;
+	text-decoration: none;
+  
+    margin:0 auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+    display: block;
+}
+
+#createbutton {
+    font-family: 'fleuronregular', Arial, Helvetica, sans-serif;
+    position: fixed;
+    top: 35px;
+    right: 30px;
+
+    width: 50px;
+    height: 50px;
+ 
+	font-style: normal;
+	font-weight: bold;	
+    font-size: 30px;
+    
+    padding: 0; 
+	
+    border-radius: 50%;
+    border: 2px solid #0F0F0F;
+	background-color:#ffffff04;
+	
+	color: black;
+
+}
+
+#snakeid {
+
+    font-family: 'fleuronregular', Arial, Helvetica, sans-serif;
+	font-style: normal;
+	font-size: 25px;
+	
+	-webkit-border-radius: 85px;
+	-khtml-border-radius: 85px;	
+	-moz-border-radius: 85px;
+    border-radius: 85px;
+    
+    border: 2px solid #0F0F0F;
+    box-sizing: border-box;
+	
+	background-color:#ffffff04;
+	
+	color: black;
+	padding-left: 23px;
+	padding-right:23px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	text-align: center;
+  
+    margin:0 auto;
+    margin-bottom: 25px;
+
+    text-align: center;
+    cursor: pointer;
+  }
+
+#stateText {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    padding-right: 9px;
+    padding-bottom: 15px;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    z-index: 2;
+}
+
+.btn-group button {
+    margin-left: auto;
+	martin-right: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;	
+	text-align: center;
+}
+
+#prevbutton {
+    font-family: 'fleuronregular', Arial, Helvetica, sans-serif;
+ 
+	font-style: normal;
+	font-weight: bold;	
+	font-size: 10px;
+	
+	-webkit-border-radius: 10px;
+	-khtml-border-radius: 10px;	
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	
+	background-color:#FF7A00;
+	
+	color: black;
+	border: 0;
+	padding-left: 40px;
+	padding-right: 40px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-align: center;
+	text-decoration: none;
+}
+
+#nextbutton {
+    font-family: 'fleuronregular', Arial, Helvetica, sans-serif;
+ 
+	font-style: normal;
+	font-weight: bold;	
+	font-size: 10px;
+	
+	border-radius: 4%/15%;
+	
+	background-color:#00FFE0;
+	
+	color: black;
+	
+	-webkit-border-radius: 10px;
+	-khtml-border-radius: 10px;	
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	
+	padding-left: 40px;
+	padding-right: 40px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;	
+}
+
+#homebutton {
+    font-family: 'fleuronregular', Arial, Helvetica, sans-serif;
+ 
+	font-style: normal;
+	font-weight: bold;	
+	font-size: large;
+	
+	-webkit-border-radius: 10px;
+	-khtml-border-radius: 10px;	
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	
+	background-color:#FF7A00;
+	
+	color: black;
+	border: 0;
+	padding-left: 40px;
+	padding-right: 40px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+  
+	position: relative;
+	left: 50%;
+    top: 88%;
+	transform: translate(-50%, -50%);
+}
+
+#bodytext2 {
+	font-style: normal;
+	font-weight: normal;	
+	font-size: small;
+    position: fixed;
+    top:45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#debugText {
+    position: fixed;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#instruction {
+    font-weight: 600;
+    position: fixed;
+    width: 350px;
+    text-align: center;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#timer {
+    font-weight: 400;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#phoneNum {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    padding-left: 7px;
+    padding-top: 7px;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    z-index: 2;
+
+}
+
+/* The ellipse button */
+
+.A-button {
+    position: fixed;
+    width: 300px;
+    height: 300px;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    opacity: 0.8;
+    z-index: 1;
+    transition: opacity 0.2s;
+    transition: background-color 0.9s;
+    transition: width 0.2s;
+}
+
+.B-button {
+    position: fixed;
+    width: 300px;
+    height: 300px;
+    bottom: 0px;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    border-radius: 50%;
+    z-index: 1;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+    transition: background-color 0.9s;
+    transition: width 0.2s;
+}
+
+.active {
+    width: 350px;
+    opacity: 1.0;
+}
+
+/* Rectangle */
+
+.rectangle {
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    z-index: -200;
+    opacity: 0;
+    transition: background-color 0.9s;
+    opacity: 0.5s;
+}
+
+.visible {
+    opacity: 0.7;
+}
+
+.blink {
+    animation: fade 1500ms infinite;
+    -webkit-animation: fade 1500ms infinite;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.7;
+    }
+    50% {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 0.7;
+    }
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: 0.7;
+    }
+    50% {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 0.7;
+    }
+}
+
+/* Game Over Restart Button */
+
+#restartButton {
+    position: fixed;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    -moz-border-radius: 18px;
+    -webkit-border-radius: 18px;
+    border-color: whitesmoke;
+    border-radius: 18px;
+    border: 3px solid #FFFFFF;
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+    padding: 10px 25px;
+    text-decoration: none;
+    display: none;
+}
+
+#restartButton:hover {
+    background-color: rgb(69, 60, 233);
+}
+
+#restartButton:active {
+    background-color: darkblue;
+}
