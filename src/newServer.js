@@ -29,6 +29,7 @@ function originIsAllowed(origin)
 {
 	if( ( origin == "http://localhost" ) ||
 		( origin == "http://snake.city" ) || 
+		( origin == "https://snake.city" ) || 
 		( origin == "http://192.168.1.177" ) ) // Your IP address goes here for debugging
 	{
 		return true;
