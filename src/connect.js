@@ -1,5 +1,5 @@
 
-	ws = new WebSocket("wss://localhost", "echo-protocol");
+	ws = new WebSocket("ws://localhost", "echo-protocol");
 
     ws.onopen = function ()
 	{
