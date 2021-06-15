@@ -12,7 +12,7 @@ var app = express();
 var server = require('http').Server(app);
 
 var whosPlaying = {};	// We use this to store useful information keyed by connection id
-
+const PUBLIC_FOLDER = __dirname+'/../public'
 wsServer = new WebSocketServer({
     httpServer: server,
     // You should not use autoAcceptConnections for production
@@ -382,6 +382,8 @@ wsServer.on('request', function(request)
     });
 });
 
+app.use(express.static(PUBLIC_FOLDER))
+
 app.get('/', (req, res) =>
 {
 	res.sendFile(__dirname + '/index.html');
@@ -409,7 +411,7 @@ app.get('/connect.js', (req, res) =>
 
 app.get('/Snake.City_PlayBlueprint.pdf', (req, res) =>
 {
-	res.sendFile(__dirname + '/Snake.City_PlayBlueprint.pdf');
+	res.sendFile(PUBLIC_FOLDER  + '/Snake.City_PlayBlueprint.pdf');
 });
 
 app.get('/create.html', (req, res) =>
@@ -419,42 +421,42 @@ app.get('/create.html', (req, res) =>
 
 app.get('/game.css', (req, res) =>
 {
-	res.sendFile(__dirname + '/game.css');
+	res.sendFile(PUBLIC_FOLDER + '/game.css');
 });
 
 app.get('/logo.png', (req, res) =>
 {
-	res.sendFile(__dirname + '/logo.png');
+	res.sendFile(PUBLIC_FOLDER + '/logo.png');
 });
 
 app.get('/snakebg.png', (req, res) =>
 {
-	res.sendFile(__dirname + '/snakebg.png');
+	res.sendFile(PUBLIC_FOLDER + '/snakebg.png');
 });
 
 app.get('/eulogo.png', (req, res) =>
 {
-	res.sendFile(__dirname + '/eulogo.png');
+	res.sendFile(PUBLIC_FOLDER + '/eulogo.png');
 });
 
 app.get('/snakeOGP.png', (req, res) =>
 {
-	res.sendFile(__dirname + '/snakeOGP.png');
+	res.sendFile(PUBLIC_FOLDER + '/snakeOGP.png');
 });
 
 app.get('/fleuronregular-webfont.woff', (req, res) =>
 {
-	res.sendFile(__dirname + '/fleuronregular-webfont.woff');
+	res.sendFile(PUBLIC_FOLDER + '/fleuronregular-webfont.woff');
 });
 
 app.get('/fleuronregular-webfont.woff2', (req, res) =>
 {
-	res.sendFile(__dirname + '/fleuronregular-webfont.woff2');
+	res.sendFile(PUBLIC_FOLDER + '/fleuronregular-webfont.woff2');
 });
 
 app.get('/fleuronregular-ios.ttf', (req, res) =>
 {
-	res.sendFile(__dirname + '/fleuronregular-ios.ttf');
+	res.sendFile(PUBLIC_FOLDER + '/fleuronregular-ios.ttf');
 });
 
 app.get('/game/:id/:password', function (req, res, next) {
