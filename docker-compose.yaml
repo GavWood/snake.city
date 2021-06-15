@@ -3,7 +3,7 @@ version: "3.3"
 networks:
   web:
     external: true
-    
+
 volumes:
   pgdata:
 
@@ -14,8 +14,6 @@ services:
     restart: always
     expose: 
       - 80
-    ports: 
-      - "80:80"
     networks: 
       - web
     labels:
