@@ -20,17 +20,11 @@ services:
       - "traefik.enable=true"
       - "traefik.port=80"
       - "traefik.docker.network=web"
-      - "traefik.http.routers.snakecity-http.entrypoints=web"
-      - "traefik.http.routers.snakecity-http.rule=Host(`snake.city`)"
-      - "traefik.http.routers.snakecity-http.middlewares=snakecity-https"
-      - "traefik.http.middlewares.snakecity-https.redirectscheme.scheme=https"
-      - "traefik.http.routers.snakecity.entrypoints=websecure"
       - "traefik.http.routers.snakecity.rule=Host(`snake.city`)"
-      - "traefik.http.routers.snakecity.tls=true" 
+      - "traefik.http.routers.snakecity.entrypoints=websecure"
+      - "traefik.http.routers.snakecity.tls.certresolver=myresolver"      
     logging:
       driver: "json-file"
       options:
         max-size: "1024k"
         max-file: "10"    
-
-
