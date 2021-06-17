@@ -17,14 +17,16 @@ services:
     networks: 
       - web
     labels:
-      - "traefik.enable=true"
-      - "traefik.port=80"
+      - "traefik.enable=true"      
       - "traefik.docker.network=web"
       - "traefik.http.routers.snakecity.rule=Host(`snake.city`)"
       - "traefik.http.routers.snakecity.entrypoints=websecure"
-      - "traefik.http.routers.snakecity.tls.certresolver=myresolver"      
+      - "traefik.http.routers.snakecity.tls=true"
+      - "traefik.http.routers.snakecity.tls.certresolver=myresolver"
+      - "traefik.http.routers.www-router.service=www"
     logging:
       driver: "json-file"
       options:
         max-size: "1024k"
-        max-file: "10"    
+        max-file: "10"
+        
