@@ -23,7 +23,6 @@ services:
       - "traefik.http.routers.snakecity.entrypoints=websecure"
       - "traefik.http.routers.snakecity.tls=true"
       - "traefik.http.routers.snakecity.tls.certresolver=myresolver"
-      - "traefik.http.routers.www-router.service=www"
     logging:
       driver: "json-file"
       options:
